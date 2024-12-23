@@ -37,7 +37,7 @@ const Members = () => {
 
   const handleAddMember = async () => {
     try {
-      const response = await axios.post("http://localhost:9000/api/member/addmember", newMember);
+      const response = await axios.post("https://library-8l38.onrender.com/api/member/addmember", newMember);
       setMembers([...members, response.data.member]);
       setNewMember({ name: "", category: "" });
       setIsPopupOpen(false);
