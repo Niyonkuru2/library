@@ -11,7 +11,7 @@ const RegisterPage = () => {
     name: "",
     email: "",
     password: "",
-    category: "", // Add a field for category
+    category: "", 
   });
 
   const navigate = useNavigate(); // Initialize useNavigate
