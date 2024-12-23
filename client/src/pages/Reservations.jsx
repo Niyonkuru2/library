@@ -58,7 +58,7 @@ const Reservation = () => {
     <div className="flex flex-row w-full mt-0">
       <SideBar />
       <div className="flex flex-col w-full justify-center items-center p-6 max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-blue-600 mb-6 mt-8 text-center">Issued Books</h1>
+        <h1 className="text-3xl font-bold text-blue-600 mb-6 mt-8 text-center">Reserved Books</h1>
         <div className="overflow-x-auto w-full">
           <table className="min-w-full bg-white shadow-lg rounded-lg">
             <thead className="bg-blue-600 text-white">
