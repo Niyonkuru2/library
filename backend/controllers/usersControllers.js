@@ -77,7 +77,7 @@ const registerUser = async (req, res) => {
     const newMember = new memberModel({
       membershipCode,
       name: user.name,
-      category: 'Undergraduate', // You can set this dynamically based on user input
+      category: 'Undergraduate', 
     });
 
     // Save the member record
