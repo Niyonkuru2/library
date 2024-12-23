@@ -20,7 +20,7 @@ const createTransaction = async (req, res) => {
 
     // Check if the member has reached the maximum issue limit
     if (member.issuedBooks.length >= getMaxIssuedBooks(member.category)) {
-      return res.json({ success: false, message: 'Member has already issued the maximum number of books Subscribe to get more package' });
+      return res.json({ success: false, message: 'You has already issued the maximum number of books Subscribe to get more package' });
     }
 
     // Generate a unique transactionId
