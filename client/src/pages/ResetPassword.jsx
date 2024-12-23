@@ -33,7 +33,7 @@ const ResetPasswordPage = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:9000/api/user//reset-password/${token}`,
+        `https://library-8l38.onrender.com/api/user//reset-password/${token}`,
         { newPassword }
       );
 
