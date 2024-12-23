@@ -21,7 +21,7 @@ const BookDetailPage = () => {
     // Fetch the book details
     const fetchBook = async () => {
       try {
-        const response = await axios.get(`http://localhost:9000/api/book/getbook/${isbn}`);
+        const response = await axios.get(`https://library-8l38.onrender.com/api/book/getbook/${isbn}`);
         setBook(response.data);
       } catch (err) {
         setError(err.response?.data?.message || 'Failed to fetch book details.');
@@ -54,7 +54,7 @@ const BookDetailPage = () => {
     setIsActionLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:9000/api/transaction/addtransaction', {
+      const response = await axios.post('https://library-8l38.onrender.com/api/transaction/addtransaction', {
         isbn,
         membershipCode,
         issueDate,
@@ -97,7 +97,7 @@ const BookDetailPage = () => {
     setIsActionLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:9000/api/reservation/addreservation', {
+      const response = await axios.post('https://library-8l38.onrender.com/api/reservation/addreservation', {
         isbn,
         membershipCode,
         issueDate,
