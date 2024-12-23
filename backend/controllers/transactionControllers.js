@@ -29,7 +29,7 @@ const createTransaction = async (req, res) => {
     // Create new transaction
     const newTransaction = new Transaction({
       transactionId, 
-      isbn,
+      isbn: book._id,
       membershipCode,
       issueDate,
       dueDate,
