@@ -16,7 +16,7 @@ const Statistics = () => {
       {/* Greeting Section */}
       <div className="text-center mb-8">
         <h1 className="text-2xl font-bold">
-          Hello, <span className="text-red-500">GABIRO</span>
+          Hello, <span className="text-red-500"></span>
         </h1>
         <p className="text-gray-500">
           {formattedDate} | {dayOfWeek}, {formattedTime}
