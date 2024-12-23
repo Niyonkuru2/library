@@ -12,7 +12,7 @@ const Issues = () => {
     const fetchIssues = async () => {
       setLoading(true); 
       try {
-        const response = await axios.get('http://localhost:9000/api/transaction/gettransactions');
+        const response = await axios.get('https://library-8l38.onrender.com/api/transaction/gettransactions');
         const data = response.data;
 
         if (data && Array.isArray(data)) {
