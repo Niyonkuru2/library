@@ -4,7 +4,7 @@ import { useAuth } from './Context/Auth';
 import { ToastContainer } from "react-toastify";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import Library from './pages/Library';
 import Dashboard from "./pages/Dashboard";
 import Footer from "./components/Footer";
