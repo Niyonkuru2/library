@@ -23,7 +23,7 @@ const Members = () => {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/member/getmember");
+        const response = await axios.get("https://library-8l38.onrender.com/api/member/getmember");
         setMembers(response.data); 
       } catch (err) {
         setError("Failed to fetch members");
