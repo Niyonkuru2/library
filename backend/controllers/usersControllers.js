@@ -1,6 +1,6 @@
 import validator from "validator";
 import userModel from "../models/user.js";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from "jsonwebtoken";
 import memberModel from "../models/member.js";
 import nodemailer from 'nodemailer';
