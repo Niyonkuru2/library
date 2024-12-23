@@ -30,7 +30,7 @@ const createReservation = async (req, res) => {
 
     // Create the reservation
     const newReservation = new Reservation({
-      isbn: book._id,
+      isbn,
       membershipCode,
       issueDate,
       expiryDate,
