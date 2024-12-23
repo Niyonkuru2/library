@@ -19,7 +19,7 @@ const RegisterPage = () => {
   const handleRegister = async () => {
     setIsSubmitting(true);
     try {
-      const response = await axios.post("http://localhost:9000/api/user/register", formData);
+      const response = await axios.post("https://library-8l38.onrender.com/api/user/register", formData);
       setIsSubmitting(false);
 
       if (response.data.success) {
