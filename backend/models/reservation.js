@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const reservationSchema = new mongoose.Schema({
-  isbn: { type: mongoose.Schema.Types.ObjectId, ref: 'Book', required: true },
+  isbn: { type: String, required: true },
   reservationId: {
     type: String,
     default: () => `RES-${Date.now()}`,
