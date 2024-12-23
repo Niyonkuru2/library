@@ -30,7 +30,7 @@ const Navbar = ({ isLoggedIn }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:9000/api/subscribe/addsubscribe', formData);
+      const response = await axios.post('https://library-8l38.onrender.com/api/subscribe/addsubscribe', formData);
       toast(response.data.message); 
       toggleSubscriptionPopup(); // Close the popup after successful submission
     } catch (error) {
