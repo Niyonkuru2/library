@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 const transactionSchema = new mongoose.Schema({
-
   transactionId: { type: String, required: true, unique: true },
-  isbn: { type: String required: true },
+  isbn: {
+    type:String,required:true
+  },
   membershipCode: { type: String, required: true },
   issueDate: { type: Date, required: true },
   dueDate: { type: Date, required: true },
