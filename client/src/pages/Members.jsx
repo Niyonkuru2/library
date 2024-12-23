@@ -54,7 +54,7 @@ const Members = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:9000/api/member/updatemember/${editMember.membershipCode}`,
+        `https://library-8l38.onrender.com/api/member/updatemember/${editMember.membershipCode}`,
         editMember
       );
 
