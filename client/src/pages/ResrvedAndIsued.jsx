@@ -27,7 +27,7 @@ const YourBooks = () => {
       <h1 className="text-3xl font-bold text-center mb-6">Your Books</h1>
 
       <div className="mb-4">
-        <label htmlFor="membershipCode" className="block text-lg font-medium text-gray-700 mb-2">Enter Membership Code:</label>
+        <label htmlFor="membershipCode" className="block text-lg font-medium text-gray-700 mb-2">Enter Membership Code To get Your Issued And Reserved Book</label>
         <input
           type="text"
           id="membershipCode"
