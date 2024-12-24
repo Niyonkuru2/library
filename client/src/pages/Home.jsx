@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Hero from "../components/Hero";
 import { TailSpin } from "react-loader-spinner";
+import { useAuth } from "../Context/Auth";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
+  const { isLoggedIn } = useAuth(); 
 
   useEffect(() => {
     // Fetch data from the API
     axios
-      .get("https://library-8l38.onrender.com/api/book/getbooks")
+      .get("http://localhost:9000/api/book/getbooks")
       .then((response) => {
         setBooks(response.data); // Assuming response.data contains an array of book objects
       })
@@ -49,12 +51,14 @@ const Home = () => {
                 <p className="mt-2 text-sm font-medium text-center">
                   {book.title}
                 </p>
-                <Link
-                  to={`/book/${book.isbn}`}
-                  className="mt-2 text-blue-500 hover:underline"
-                >
-                  View Details
-                </Link>
+                {isLoggedIn && ( // Conditionally render the link based on isLoggedIn
+                  <Link
+                    to={`/book/${book.isbn}`}
+                    className="mt-2 text-blue-500 hover:underline"
+                  >
+                    View Details
+                  </Link>
+                )}
               </div>
             ))}
           </div>
