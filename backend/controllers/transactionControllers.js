@@ -9,7 +9,7 @@ const createTransaction = async (req, res) => {
 
     const book = await Book.findOne({ isbn });
     if (!book) {
-      return res.status(400).json({ success: false, message: 'Book not found' });
+      return res.json({ success: false, message: 'Book not found' });
     }
 
     // Check if the member exists
