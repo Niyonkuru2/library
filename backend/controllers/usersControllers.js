@@ -129,7 +129,7 @@ const requestResetPassword = async (req, res) => {
     }
 
     const token = createToken(user._id);
-    const resetLink = `${process.env.FRONTEND_URL}/reset-password/${token}`;
+    const resetLink = `${process.env.FRONTEND_URL}reset-password/${token}`;
 
     // Send the reset link via email
     const transporter = nodemailer.createTransport({
