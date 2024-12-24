@@ -30,7 +30,7 @@ const Navbar = ({ isLoggedIn }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://library-8l38.onrender.com/api/subscribe/addsubscribe', formData);
+      const response = await axios.post('http://localhost:9000/api/subscribe/addsubscribe', formData);
       toast(response.data.message); 
       toggleSubscriptionPopup(); // Close the popup after successful submission
     } catch (error) {
@@ -63,17 +63,12 @@ const Navbar = ({ isLoggedIn }) => {
       setMembershipStatus(userMembershipStatus);
     }
 
-    if (!userLoggedIn) {
-      navigate("/login");
-    } else {
-      setIsAdmin(userIsAdmin);
-      // Fetch user data
+    setIsAdmin(userIsAdmin);
       const profilePic = localStorage.getItem("profilePic") || "/noavatar.jpg";
       const name = localStorage.getItem("userName") || "Guest";
       setUserProfilePic(profilePic);
       setUserName(name);
-    }
-  }, [navigate]);
+  }, []);
 
   return (
     <>
