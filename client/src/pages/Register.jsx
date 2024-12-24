@@ -23,7 +23,7 @@ const RegisterPage = () => {
       setIsSubmitting(false);
 
       if (response.data.success) {
-        toast.success("Registration successful!");
+        toast.success("Your MembershipCode Sent To Your Email!");
         navigate("/login"); // Redirect to login page after successful registration
       } else {
         toast.error(response.data.message);
