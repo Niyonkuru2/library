@@ -23,7 +23,7 @@ const Members = () => {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/member/getmember");
+        const response = await axios.get("https://library-8l38.onrender.com/api/member/getmember");
         setMembers(response.data); 
       } catch (err) {
         setError("Failed to fetch members");
@@ -37,7 +37,7 @@ const Members = () => {
 
   const handleAddMember = async () => {
     try {
-      const response = await axios.post("http://localhost:9000/api/member/addmember", newMember);
+      const response = await axios.post("https://library-8l38.onrender.com/api/member/addmember", newMember);
       setMembers([...members, response.data.member]);
       setNewMember({ name: "", category: "" });
       setIsPopupOpen(false);
@@ -54,7 +54,7 @@ const Members = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:9000/api/member/updatemember/${editMember.membershipCode}`,
+        `https://library-8l38.onrender.com/api/member/updatemember/${editMember.membershipCode}`,
         editMember
       );
 

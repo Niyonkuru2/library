@@ -48,7 +48,7 @@ const Books = () => {
 
     const fetchBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/api/book/getbooks");
+        const response = await axios.get("https://library-8l38.onrender.com/api/book/getbooks");
         setBooks(response.data);
       } catch (err) {
         setError("Failed to fetch books");
@@ -81,7 +81,7 @@ const Books = () => {
     try {
       if (isEdit) {
         const response = await axios.put(
-          `http://localhost:9000/api/book/updatebook/${newBook.isbn}`,
+          `https://library-8l38.onrender.com/api/book/updatebook/${newBook.isbn}`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -91,7 +91,7 @@ const Books = () => {
         setBooks(updatedBooks);
         toast.success(response.data.message)
       } else {
-        const response = await axios.post("http://localhost:9000/api/book/addbook", formData, {
+        const response = await axios.post("https://library-8l38.onrender.com/api/book/addbook", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         setBooks([...books, response.data.book]);
@@ -154,7 +154,7 @@ const Books = () => {
 
   const handleDeleteBook = async (isbn) => {
     try {
-      await axios.delete(`http://localhost:9000/api/book/deletebook/${isbn}`);
+      await axios.delete(`https://library-8l38.onrender.com/api/book/deletebook/${isbn}`);
       setBooks(books.filter((book) => book.isbn !== isbn));
       toast.success("Book deleted successfully!");
     } catch (error) {

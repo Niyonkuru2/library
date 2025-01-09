@@ -11,7 +11,7 @@ const RegisterPage = () => {
     name: "",
     email: "",
     password: "",
-    category: "", // Add a field for category
+    category: "", 
   });
 
   const navigate = useNavigate(); // Initialize useNavigate
@@ -19,11 +19,11 @@ const RegisterPage = () => {
   const handleRegister = async () => {
     setIsSubmitting(true);
     try {
-      const response = await axios.post("http://localhost:9000/api/user/register", formData);
+      const response = await axios.post("https://library-8l38.onrender.com/api/user/register", formData);
       setIsSubmitting(false);
 
       if (response.data.success) {
-        toast.success("Registration successful!");
+        toast.success("Your MembershipCode Sent To Your Email!");
         navigate("/login"); // Redirect to login page after successful registration
       } else {
         toast.error(response.data.message);

@@ -9,18 +9,18 @@ const createTransaction = async (req, res) => {
 
     const book = await Book.findOne({ isbn });
     if (!book) {
-      return res.status(400).json({ success: false, message: 'Book not found' });
+      return res.json({ success: false, message: 'Book not found' });
     }
 
     // Check if the member exists
     const member = await Member.findOne({ membershipCode });
     if (!member) {
-      return res.status(400).json({ success: false, message: 'Member not found' });
+      return res.json({success: false, message: 'Member not found' });
     }
 
     // Check if the member has reached the maximum issue limit
     if (member.issuedBooks.length >= getMaxIssuedBooks(member.category)) {
-      return res.status(400).json({ success: false, message: 'Member has already issued the maximum number of books' });
+      return res.json({ success: false, message: 'You has already issued the maximum number of books Subscribe to get more package' });
     }
 
     // Generate a unique transactionId

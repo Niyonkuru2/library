@@ -12,7 +12,7 @@ const LibraryPage = () => {
   useEffect(() => {
     // Fetch data from API
     axios
-      .get("http://localhost:9000/api/book/getbooks")
+      .get("https://library-8l38.onrender.com/api/book/getbooks")
       .then((response) => {
         setBooks(response.data); // Assuming response.data is an array of book objects
       })

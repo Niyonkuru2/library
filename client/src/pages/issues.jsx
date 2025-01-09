@@ -12,7 +12,7 @@ const Issues = () => {
     const fetchIssues = async () => {
       setLoading(true); 
       try {
-        const response = await axios.get('http://localhost:9000/api/transaction/gettransactions');
+        const response = await axios.get('https://library-8l38.onrender.com/api/transaction/gettransactions');
         const data = response.data;
 
         if (data && Array.isArray(data)) {
@@ -74,7 +74,7 @@ const Issues = () => {
             <tbody>
               {issues.map((issue) => (
                 <tr key={issue.id} className="border-t">
-                  <td className="py-3 px-6">{issue.bookTitle}</td>
+                  <td className="py-3 px-6">{issue.isbn}</td>
                   <td className="py-3 px-6">{issue.memberName}</td>
                   <td className="py-3 px-6">{issue.issueDate}</td>
                   <td className="py-3 px-6">{issue.dueDate}</td>

@@ -33,7 +33,7 @@ const ResetPasswordPage = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:9000/api/user//reset-password/${token}`,
+        `https://library-8l38.onrender.com/api/user//reset-password/${token}`,
         { newPassword }
       );
 
@@ -52,6 +52,10 @@ const ResetPasswordPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="w-full max-w-md px-6 py-8 shadow-lg rounded-lg">
+        <div className="flex justify-center mb-6">
+          <img src="/s7.png" alt="HypeBooks Logo" className="w-12 h-12" />
+        </div>
+        <h1 className="text-2xl font-bold text-center mb-2 text-gray-900">HypeBooks</h1>
         <h1 className="text-2xl font-bold text-center mb-4 text-gray-900">Reset Your Password</h1>
 
         {loading ? (

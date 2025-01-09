@@ -26,7 +26,7 @@ const App = () => {
   const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <ToastContainer />
       <Navbar isLoggedIn={isLoggedIn} />
 

@@ -12,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     // Fetch first 3 books from the API
     axios
-      .get("http://localhost:9000/api/book/getbooks")
+      .get("https://library-8l38.onrender.com/api/book/getbooks")
       .then((response) => {
         setBooks(response.data.slice(0, 3)); // Limit to first 3 books
       })

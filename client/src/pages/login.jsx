@@ -27,7 +27,7 @@ const LoginPage = () => {
     setLoading(true);
     try {
       const formData = { email, password };
-      const response = await axios.post("http://localhost:9000/api/user/login", formData);
+      const response = await axios.post("https://library-8l38.onrender.com/api/user/login", formData);
 
       setLoading(false);
       if (response.data.success) {
@@ -57,7 +57,7 @@ const LoginPage = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:9000/api/user/request-reset-password", { email: resetEmail });
+      const response = await axios.post("https://library-8l38.onrender.com/api/user/request-reset-password", { email: resetEmail });
       if (response.data.success) {
         toast.success("Password reset link sent to your email.");
         setIsResetModalOpen(false); // Close the modal after successful request

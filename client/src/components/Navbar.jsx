@@ -63,17 +63,12 @@ const Navbar = ({ isLoggedIn }) => {
       setMembershipStatus(userMembershipStatus);
     }
 
-    if (!userLoggedIn) {
-      navigate("/login");
-    } else {
-      setIsAdmin(userIsAdmin);
-      // Fetch user data
+    setIsAdmin(userIsAdmin);
       const profilePic = localStorage.getItem("profilePic") || "/noavatar.jpg";
       const name = localStorage.getItem("userName") || "Guest";
       setUserProfilePic(profilePic);
       setUserName(name);
-    }
-  }, [navigate]);
+  }, []);
 
   return (
     <>
