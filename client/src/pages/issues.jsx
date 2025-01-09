@@ -74,7 +74,7 @@ const Issues = () => {
             <tbody>
               {issues.map((issue) => (
                 <tr key={issue.id} className="border-t">
-                  <td className="py-3 px-6">{issue.isbn}</td>
+                  <td className="py-3 px-6">{issue.bookTitle}</td>
                   <td className="py-3 px-6">{issue.memberName}</td>
                   <td className="py-3 px-6">{issue.issueDate}</td>
                   <td className="py-3 px-6">{issue.dueDate}</td>
