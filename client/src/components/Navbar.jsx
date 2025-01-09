@@ -117,13 +117,19 @@ const Navbar = ({ isLoggedIn }) => {
             <span className="text-sm text-blue-500">{`Membership: ${membershipStatus}`}</span>
           )}
 
+{isLoggedIn && (
+            <a href="/dashboard" className="hover:text-gray-600">
+              <span>Dashboard</span>
+            </a>
+          )}
+
           {isLoggedIn && (
             <a
               href="/reserveissue"
-              className="p-2 rounded-md bg-gray-100 hover:bg-gray-200"
+              className="hover:text-gray-600"
               aria-label="Notifications"
             >
-              <span className="text-blue-500">YourBooks</span>
+              <span>Your Books</span>
             </a>
           )}
 
@@ -289,11 +295,6 @@ const Navbar = ({ isLoggedIn }) => {
         </div>
         <div className="px-4 py-2 text-sm font-medium">{userName}</div>
         <ul className="p-4 space-y-4">
-          <li>
-            <a href="#" className="hover:text-gray-400">
-              Edit Profile
-            </a>
-          </li>
           <li>
             <a href="/dashboard" className="hover:text-gray-400">
               Dashboard
